@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <style>
+      .less {
+        text-align: center;
+        font-size: larger;
+        margin-left: 730px;
+      }
+      .more {
+        text-align: center;
+        font-weight: bolder;
+        font-size: larger;
+      }
+      .day {
+        text-align: center;
+      }
+      .degrees {
+       text-align: center;
+       margin-left: 730px;
+      }
+      .weather {
+       text-align: center;
+       margin-left: 10px;
+       font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>&#127780
+    </br>
+       Currently 21° in Tokyo
+      </h1>
+    <span class="less">13° / </span>
+    <span class="more">23°</span>
+   </br></br></br>
+    <div class="day"><strong>🌧 Tomorrow</strong></div>
+   </br>
+    <span class="degrees">10° / </span>
+    <span class="weather">22°</span>
+    </br></br></br>
+    <div class="day"><strong>🌦 Saturday</strong></div>
+    </br>
+    <span class="degrees">15° / </span>
+    <span class="weather">17°</span>
+    </br></br></br>
+    <div class="day"><strong>&#127774 Sunday</strong></div>
+    </br>
+    <span class="degrees">25° / </span>
+    <span class="weather">28°</span>
+    </br></br></br>
+    <button>Change city</button>
+    <h2>Coded by Olha Kolisnyk</h2>
+    <style>
+      h1 {
+        text-align: center;
+        color: #245cc0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 34px;
+        line-height: 48px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background-color: #1A58D2;
+        border-radius: 100px 100px 100px 100px;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        font-size: 18px;
+        border: 1px solid white;
+      }
+      h2 {
+        text-align: center;
+        font-family: cursive;
+        line-height: 40px;
+        font-size: 22px;
+      }
+    </style>
+    <script>
+     function ourTemperature() {
+         let city = prompt("What city do you live?");
+         let temperature = prompt("What temperature is it?");
+         let h1 = document.querySelector("h1");
+         if (temperature >= 0) {
+          h1.innerHTML = "&#128540" + "<br />" + "Currently " + temperature + "°C in " + city;
+        } else {
+          h1.innerHTML ="&#128532" + "<br />" + "Currently " + temperature + "°C in " + city;
+        }
+       
+      }
+      let cityButton = document.querySelector("button");
+      cityButton.addEventListener("click", ourTemperature);
+    </script>
+  </body>
+</html>
